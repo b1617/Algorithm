@@ -34,7 +34,8 @@ public class Dijkstra {
 		int[] ans = dijkstra(1);
 
 		for (int i = 1; i < ans.length; i++) {
-			out.println(i + " " + ans[i]);
+
+			out.println("Vertex : " + 1 + " To  Vertex " +  i + " = " +  "Distance : " + ans[i]);
 		}
 		
 		out.flush();

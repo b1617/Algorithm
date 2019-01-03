@@ -37,6 +37,10 @@ public class DijkstraWithPriorityQueue {
 		if (val[last] == 0) {
 			out.println(-1);
 		} else {
+
+			out.println();
+			out.println("Shortest path between the vertex 1 and the vertex n");
+
 			while (last != 1) {
 				last = val[last];
 				ans.add(last);
@@ -71,6 +75,12 @@ public class DijkstraWithPriorityQueue {
 				}
 			}
 		}
+
+		
+		for (int i = 1; i < dist.length; i++) {
+			System.out.println("Vertex : " + 1 + " To  Vertex " +  i + " = " +  "Distance : " + dist[i]);
+		}
+
 		return prev;
 	}
 
