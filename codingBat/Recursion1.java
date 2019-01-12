@@ -1,6 +1,6 @@
 package algo.ds.codingBat;
 
-public class Recursion {
+public class Recursion1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
