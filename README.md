@@ -1,1 +1,2 @@
-# Algorithm && Data Structure
+# Algorithm and Data Structure
+### Pratice and learn
