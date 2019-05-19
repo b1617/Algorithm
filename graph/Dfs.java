@@ -3,6 +3,7 @@ package algo.ds.graph;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Stack;
 
@@ -12,7 +13,7 @@ public class Dfs {
 
 	public static void main(String[] args) throws Exception {
 
-		 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String[] a = br.readLine().split(" ");
 		int cities = Integer.parseInt(a[0]);
 		int edges = Integer.parseInt(a[1]);
@@ -25,7 +26,7 @@ public class Dfs {
 			int x = Integer.parseInt(roads[0]);
 			int y = Integer.parseInt(roads[1]);
 			nodes[x].add(y);
-			//nodes[y].add(x); 
+			nodes[y].add(x);
 		}
 		dfs(0);
 
@@ -35,6 +36,9 @@ public class Dfs {
 		int size = nodes.length;
 		Stack<Integer> stack = new Stack<>();
 		boolean[] visited = new boolean[size];
+		int[] distance = new int[size + 1];
+		Arrays.fill(distance, Integer.MAX_VALUE);
+		distance[0] = 0;
 		visited[i] = true;
 		stack.push(i);
 		while (!stack.isEmpty()) {
@@ -42,8 +46,9 @@ public class Dfs {
 			System.out.print(i + " ");
 			for (int j = 0; j < nodes[i].size(); j++) {
 				int x = nodes[i].get(j);
-				if (!visited[x]) {
+				if (!visited[x] && distance[i] + 1 < distance[x]) {
 					stack.add(x);
+					distance[x] = distance[i] + 1;
 					visited[x] = true;
 				}
 			}
