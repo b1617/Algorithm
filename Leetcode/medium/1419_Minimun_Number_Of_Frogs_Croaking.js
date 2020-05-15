@@ -1,7 +1,9 @@
 /**
+ * Time complexity : O(n)
  * @param {string} croakOfFrogs
  * @return {number}
  */
+
 var minNumberOfFrogs = function (croakOfFrogs) {
   let ct = {
     c: 0,
@@ -37,5 +39,3 @@ var minNumberOfFrogs = function (croakOfFrogs) {
   }
   return max;
 };
-
-// Time complexity : O(n)
