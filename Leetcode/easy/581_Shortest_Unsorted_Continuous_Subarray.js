@@ -22,5 +22,3 @@ var findUnsortedSubarray = function (nums) {
   }
   return y != null && y != null ? y - x : 0;
 };
-
-console.log(findUnsortedSubarray([2, 6, 4, 8, 10, 9, 15]));
