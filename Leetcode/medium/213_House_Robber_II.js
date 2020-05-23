@@ -18,4 +18,3 @@ function robHouse(nums) {
   }
   return nums[nums.length - 1];
 }
-

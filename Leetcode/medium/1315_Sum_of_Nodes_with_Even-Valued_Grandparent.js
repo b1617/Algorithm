@@ -8,6 +8,7 @@
  */
 /**
  * Time complexity : O(n)
+ * Space complexity : O(bd)
  * @param {TreeNode} root
  * @return {number}
  */

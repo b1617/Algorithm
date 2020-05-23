@@ -1,5 +1,6 @@
 /**
  * Time complexity : 0(nk)
+ * Space complexity : O(nk)
  * @param {string[]} strs
  * @return {string[][]}
  */

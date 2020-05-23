@@ -1,5 +1,6 @@
 /**
  * Time complexity : O(nlogn)
+ * Space complexity : O(n)
  * @param {number[]} nums
  * @return {number}
  */
