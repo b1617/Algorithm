@@ -4,6 +4,7 @@
  * @param {number[][]} matrix
  * @return {number[]}
  */
+=
 var findDiagonalOrder = function (matrix) {
   let res = [];
   const len = matrix.length;
@@ -29,11 +30,3 @@ var findDiagonalOrder = function (matrix) {
   }
   return res;
 };
-
-console.log(
-  findDiagonalOrder([
-    [2, 5],
-    [8, 4],
-    [0, -1]
-  ])
-);
