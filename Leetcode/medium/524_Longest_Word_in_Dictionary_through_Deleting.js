@@ -1,6 +1,6 @@
 /**
  * Time complexity : O(n^2)
- * Space complexity : O(n)
+ * Space complexity : O(n^2)
  * @param {string} s
  * @param {string[]} d
  * @return {string}
@@ -26,7 +26,6 @@ var findLongestWord = function (s, d) {
     let isPossible = true;
     for (let j = 0; j < word.length; ++j) {
       const chr = word[j];
-
       if (copyMaps[chr] && copyMaps[chr].ct > 0) {
         let indexBigger = copyMaps[chr].index.find(
           (index) => index > lastIndex
@@ -48,7 +47,7 @@ var findLongestWord = function (s, d) {
       }
     }
     if (isPossible && word.length > 0) {
-      // check lexico small
+      // check lexico size
       if (res !== null) {
         if (res.length < word.length) {
           res = word;
@@ -68,15 +67,3 @@ var findLongestWord = function (s, d) {
   }
   return res === null ? '' : res;
 };
-
-console.log(
-  'return',
-  findLongestWord('aewfafwafjlwajflwajflwafj', [
-    'apple',
-    'ewaf',
-    'awefawfwaf',
-    'awef',
-    'awefe',
-    'ewafeffewafewf'
-  ])
-);
